@@ -28,6 +28,7 @@
             <option value="48">48</option>
             <option value="72">72</option>
         </select>
+        <button id="runButton">Run</button>
     </div>
     <div>
         <textarea id="editorPane" contenteditable="true"></textarea>
@@ -93,6 +94,14 @@ sizeComboBox.addEventListener("change", function() {
     var selectedText = editorPane.innerHTML.substring(editorPane.selectionStart, editorPane.selectionEnd);
     editorPane.setRangeText("<font size=\"" + size + "\">" + selectedText.replace(/\<.*?\>/g, "") + "</font>");
 });
+        runButton.addEventListener("click", function() {
+        var code = editorPane.value;
+        var iframe = document.createElement("iframe");
+        iframe.src = "data:text/html;charset=utf-8," + encodeURI(code);
+        iframe.style.width = "100%";
+        iframe.style.height = "500px";
+        document.body.appendChild(iframe);
+    });
     </script>
 </body>
 </html>
