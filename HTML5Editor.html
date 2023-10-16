@@ -48,7 +48,7 @@
         boldButton.addEventListener("click", function() {
     editorPane.focus();
     var selectedText = editorPane.innerHTML.substring(editorPane.selectionStart, editorPane.selectionEnd);
-    editorPane.setRangeText("<b>" + selectedText.replace(/\<.*?\>/g, "") + "</b>");
+    editorPane.document.execCommand("insertHTML", false, "<b>" + selectedText + "</b>");
 });
 
 italicButton.addEventListener("click", function() {
