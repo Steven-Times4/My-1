@@ -54,45 +54,45 @@
 italicButton.addEventListener("click", function() {
     editorPane.focus();
     var selectedText = editorPane.innerHTML.substring(editorPane.selectionStart, editorPane.selectionEnd);
-    editorPane.setRangeText("<i>" + selectedText+selectedText.replace(/\<.*?\>/g, "") + "</i>");
+    editorPane.setRangeText("<i>" + selectedText.replace(/\<.*?\>/g, "") + "</i>");
 });
 
 underlineButton.addEventListener("click", function() {
     editorPane.focus();
     var selectedText = editorPane.innerHTML.substring(editorPane.selectionStart, editorPane.selectionEnd);
-    editorPane.setRangeText("<u>" + selectedText+selectedText.replace(/\<.*?\>/g, "") + "</u>");
+    editorPane.setRangeText("<u>" + selectedText.replace(/\<.*?\>/g, "") + "</u>");
 });
 
 strikeButton.addEventListener("click", function() {
     editorPane.focus();
     var selectedText = editorPane.innerHTML.substring(editorPane.selectionStart, editorPane.selectionEnd);
-    editorPane.setRangeText("<strike>" + selectedText+selectedText.replace(/\<.*?\>/g, "") + "</strike>");
+    editorPane.setRangeText("<strike>" + selectedText.replace(/\<.*?\>/g, "") + "</strike>");
 });
 
 subscriptButton.addEventListener("click", function() {
     editorPane.focus();
     var selectedText = editorPane.innerHTML.substring(editorPane.selectionStart, editorPane.selectionEnd);
-    editorPane.setRangeText("<sub>" + selectedText+selectedText.replace(/\<.*?\>/g, "") + "</sub>");
+    editorPane.setRangeText("<sub>" + selectedText.replace(/\<.*?\>/g, "") + "</sub>");
 });
 
 superscriptButton.addEventListener("click", function() {
     editorPane.focus();
     var selectedText = editorPane.innerHTML.substring(editorPane.selectionStart, editorPane.selectionEnd);
-    editorPane.setRangeText("<sup>" + selectedText+selectedText.replace(/\<.*?\>/g, "") + "</sup>");
+    editorPane.setRangeText("<sup>" + selectedText.replace(/\<.*?\>/g, "") + "</sup>");
 });
 
 fontComboBox.addEventListener("change", function() {
     var font = fontComboBox.value;
     editorPane.focus();
     var selectedText = editorPane.innerHTML.substring(editorPane.selectionStart, editorPane.selectionEnd);
-    editorPane.setRangeText("<font face=\"" + font + "\">" + selectedText+selectedText.replace(/\<.*?\>/g, "") + "</font>");
+    editorPane.setRangeText("<font face=\"" + font + "\">" + selectedText.replace(/\<.*?\>/g, "") + "</font>");
 });
 
 sizeComboBox.addEventListener("change", function() {
     var size = sizeComboBox.value;
     editorPane.focus();
     var selectedText = editorPane.innerHTML.substring(editorPane.selectionStart, editorPane.selectionEnd);
-    editorPane.setRangeText("<font size=\"" + size + "\">" + selectedText+selectedText.replace(/\<.*?\>/g, "") + "</font>");
+    editorPane.setRangeText("<font size=\"" + size + "\">" + selectedText.replace(/\<.*?\>/g, "") + "</font>");
 });
         runButton.addEventListener("click", function() {
         var code = editorPane.value;
